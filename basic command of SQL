@@ -1,4 +1,3 @@
-
 create database akashshop
 --------------------------
 create table shop(
@@ -28,7 +27,7 @@ update shop
 set iteam_name = 'magie', iteam_q = 24,iteam_price =12
 where iteam_id =3
 
---------------------------------
+------------------alter table--------------
 --adding a column of expire date
 
 alter table shop
@@ -42,6 +41,8 @@ drop column iteam_exp
 alter table shop
 rename column iteam_q to iteam_quantity
 
+---------------------------
+
 -- delete a specific raw
 delete from shop
 where iteam_id =3
@@ -51,3 +52,14 @@ truncate table shop
 
 --drop / delete table with all data
 drop table shop
+
+------------select statement-------------
+
+-- select all data from database
+select * from shop
+
+-- select particular data database
+select iteam_name,iteam_mfg from shop
+
+-- select unique field avilable in table
+select distinct iteam_q from shop
