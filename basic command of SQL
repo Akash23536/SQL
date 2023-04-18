@@ -1,0 +1,53 @@
+
+create database akashshop
+--------------------------
+create table shop(
+  iteam_id int8 primary key not null,
+  iteam_name varchar(50) not null,
+  iteam_Q int not null,
+  iteam_price numeric not null,
+  iteam_mfg date 
+)
+-----------------------------
+select * from shop   -- to view all data of table
+-------------------------------
+
+--inserting the value in shop table
+
+insert into shop
+(iteam_id,iteam_name,iteam_Q,iteam_price,iteam_mfg)
+values
+(1,'mango',100,50,'2020-08-01'),
+(2,'apple',100,20,'2020-08-05'),
+(3,'oreo',15,10,'2020-08-29'),
+(4,'milk',40,32,'2020-08-22');
+
+-- updating the oreo by magie
+
+update shop
+set iteam_name = 'magie', iteam_q = 24,iteam_price =12
+where iteam_id =3
+
+--------------------------------
+--adding a column of expire date
+
+alter table shop
+add column iteam_exp date
+
+--removing a column of expire date
+alter table shop
+drop column iteam_exp
+
+-- rename the column
+alter table shop
+rename column iteam_q to iteam_quantity
+
+-- delete a specific raw
+delete from shop
+where iteam_id =3
+
+--truncate / delete all raws
+truncate table shop
+
+--drop / delete table with all data
+drop table shop
