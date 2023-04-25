@@ -54,5 +54,15 @@ Q -> Find the difference between the total number of CITY entries in the table a
   Ans->   select (count(*) - count(distinct city)) from station
   
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-Q->  
+Q->  Query the two cities in STATION with the shortest and longest CITY names, as well as their respective lengths
+(i.e.: number of characters in the name). If there is more than one smallest or largest city, 
+choose the one that comes first when ordered alphabetically.
+     
+       
+Ans-> 
+select city, length(city) from station order by length(city) desc, city asc limit 1;
+select city, length(city) from station order by length(city) asc, city asc limit 1;
+-----------------------------------------------------------------------------------------------------------------------------------------
+Q ->
+
 
