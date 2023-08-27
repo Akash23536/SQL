@@ -1,5 +1,5 @@
-#  SQL using -> PostgreSql
+##  SQL using -> PostgreSql
     Basic to advance
     
-# HackerRank Question
+## HackerRank Question
     with Solutions
