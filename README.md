@@ -2,4 +2,4 @@
     Basic to advance
     
 ## HackerRank Question
-    with Solutions
+    certificate 
